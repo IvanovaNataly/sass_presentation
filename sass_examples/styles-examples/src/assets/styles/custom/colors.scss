@@ -1,0 +1,41 @@
+$white: #ffffff;
+$black: #000000;
+
+//system colors
+$system-primary: #0076c0;
+$system-accent: #00acc1;
+$system-warn: #c82929;
+$system-notification: #da7f0e;
+$system-normal: #318e1e;
+
+$error-text: #b00020;
+$error-bg: rgba(239, 106, 110, 0.15);
+
+//layout colors
+$main-color-light: #8c8c8c;
+$main-color-middle: #666666;
+$main-color-dark: #000000;
+
+$secondary-color-light: #8d8d8d;
+$secondary-color-middle: #6a6a6a;
+
+$main-background: #c7cecf;
+$main-transparent: #e0f1fa;
+$background-grey: #f1f1f1;
+$background-primary-transparent: #e1eff7;
+
+$side-nav-background: #272222;
+$side-nav-color: #aeaeae;
+$side-nav-highlighted: #2A6F7A;
+$side-nav-divider: #4b4b4b;
+$side-nav-link-active: #41a8b8;
+
+$border-color: #e4e4e4;
+$border-color-dark: #e0e0e0;
+$hover-gray: #e7e7e7;
+$icon-color: rgba(0, 0, 0, 0.54);
+
+$card-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.09),
+                0 3px 1px -2px rgba(0, 0, 0, 0),
+                0 2px 2px 0 rgba(0, 0, 0, 0);
+$subheader-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16);

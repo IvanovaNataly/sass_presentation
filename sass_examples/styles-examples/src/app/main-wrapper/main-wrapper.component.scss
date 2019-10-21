@@ -1,0 +1,92 @@
+@import '../../assets/styles/custom';
+
+.container {
+    display: flex;
+    height: 100%;
+    background-color: $main-background;
+}
+
+.main {
+    display: flex;
+    font-size: $main-font-size;
+    color: $main-color-middle;
+    width: 100%;
+    flex-direction: column;
+    &-wrapper {
+        display: flex;
+        flex: 1 1 calc(100% - #{$header-height} - #{$footer-height});
+        justify-content: center;
+        align-items: center;
+    }
+    &-description {
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    &-form {
+        &-item {
+            display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-label {
+            flex: 1 1;
+        }
+        &-input {
+            @include resetInput;
+            text-align: center;
+            width: 50px;
+        }
+        &-error {
+            text-align: right;
+            font-size: $small-font-size;
+            color: $system-warn;
+            flex: 0 0 100%;
+            margin-top: 5px;
+        }
+        &-button-wrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            margin-top: 30px;
+        }
+        &-btn:not(:last-child) {
+            margin-left: 10px;
+        }
+    }
+}
+
+.header {
+    color: $white;
+    height: $header-height;
+    line-height: $header-height;
+    padding: 0 $card-padding;
+    background-color: $system-primary;
+    &-title {
+        @include resetH;
+        font-size: $large-font-size;
+        font-weight: 500;
+    }
+}
+
+.footer {
+    color: $white;
+    height: $footer-height;
+    padding: 0 $card-padding;
+    background-color: $system-primary;
+    &-list {
+        @include resetUl;
+        display: flex;
+        justify-content: space-around;
+    }
+    &-link {
+        @include resetLink;
+        display: block;
+        margin-bottom: 5px;
+    }
+    &-section-item-name {
+        list-style: none;
+    }
+}

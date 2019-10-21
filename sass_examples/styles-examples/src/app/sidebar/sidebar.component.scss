@@ -1,0 +1,16 @@
+@import '../../assets/styles/custom';
+
+.sidebar {
+    color: $side-nav-color;
+    width: $side-nav-width;
+    height: 100%;
+    padding: $card-padding;
+    background-color: $side-nav-background;
+    flex: 0 0 $side-nav-width;
+
+    &-title {
+        @include resetH;
+        font-size: $main-font-size;
+        padding: $card-padding 0;
+    }
+}
