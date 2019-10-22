@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/custom.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -25,15 +26,39 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>SASS</section>
-				<section>Why?
-                    <ul>
-                        <li>easy to maintain</li>
-                        <li>easy </li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </section>
+				<!--<section><h3>SASS</h3></section>-->
+				<!--<section>-->
+					<!--<h4>Why?</h4>-->
+                    <!--<ul>-->
+                        <!--<li class="fragment fade-left">easy to code</li>-->
+                        <!--<li class="fragment fade-left">easy to read</li>-->
+                        <!--<li class="fragment fade-left">easy to maintain</li>-->
+                        <!--<li class="fragment fade-left">easy to step into the future</li>-->
+                    <!--</ul>-->
+                <!--</section>-->
+				<section>
+					<h4>variables</h4>
+					<pre>
+						<code>.sidebar {
+	color: #aeaeae;
+	width: 220px;
+	height: 100%;
+	padding: 24px;
+	background-color: #272222;
+	flex: 0 0 220px;
+}</code>
+				  </pre>
+					<pre>
+						<code>.sidebar {
+	color: $side-nav-color;
+	width: $side-nav-width;
+	height: 100%;
+	padding: $card-padding;
+	background-color: $side-nav-background;
+	flex: 0 0 $side-nav-width;
+}</code>
+					</pre>
+				</section>
 			</div>
 		</div>
 
@@ -44,6 +69,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+                fragments: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },

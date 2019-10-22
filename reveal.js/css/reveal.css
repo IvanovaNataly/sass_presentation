@@ -1596,3 +1596,10 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
