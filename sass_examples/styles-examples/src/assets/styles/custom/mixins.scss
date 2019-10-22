@@ -1,0 +1,45 @@
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin respond-to($media) {
+    @if $media == tiny {
+        @media screen and (max-width: 374px) { @content; }
+    }
+    @if $media == handhelds {
+        @media screen and (max-width: 540px) { @content; }
+    }
+    @if $media == phones {
+        @media screen and (max-width: 667px) { @content; }
+    }
+    @else if $media == small-screens {
+        @media screen and (max-width: 962px) and (min-width: 541px) { @content; }
+    }
+    @else if $media == medium-screens {
+        @media screen and (max-width: 1024px) { @content; }
+    }
+    @else if $media == wide-screens {
+        @media screen and (max-width: 1366px) { @content; }
+    }
+    @else if $media == more-wide-screens {
+        @media screen and (max-width: 1700px) { @content; }
+    }
+    @else if $media == extra-wide-screens {
+        @media screen and (min-width: 1981px) { @content; }
+    }
+    @else if $media == plazmas {
+        @media screen and (min-width: 2561px) { @content; }
+    }
+    @else if $media == landscape {
+        @media screen and (min-width: 540px) and (orientation: landscape)
+        and (max-width: 812px) { @content; }
+    }
+}
+
+@mixin internetExplorer() {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content;
+    }
+}
