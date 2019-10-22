@@ -36,15 +36,17 @@
 
 @mixin resetBtn {
     font-family: inherit;
-    text-align: center;
+    letter-spacing: inherit;
     padding: 0;
     margin: 0;
     border: none;
     background-color: transparent;
-    background-image: none;
     box-shadow: none;
     text-shadow: none;
     cursor: pointer;
+    &:not(.icon-custom) {
+        background-image: none;
+    }
 }
 
 @mixin resetLink {
@@ -53,6 +55,5 @@
     &:hover,
     &:focus {
         text-decoration: none;
-        outline: none;
     }
 }

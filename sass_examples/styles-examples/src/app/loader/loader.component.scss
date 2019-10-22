@@ -1,12 +1,16 @@
 @import '../../assets/styles/custom';
 
+$loader-width: 23px;
+
 .loader {
-  &-container {
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-  }
-  &-image {
-    fill: $system-primary;
-  }
+    &-container {
+        display: inline-block;
+        height: $loader-width;
+        width: $loader-width;
+        margin-right: 5px;
+        vertical-align: sub;
+    }
+    &-image {
+        fill: $system-primary;
+    }
 }

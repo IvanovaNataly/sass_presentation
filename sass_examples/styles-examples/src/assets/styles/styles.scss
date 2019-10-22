@@ -1,4 +1,4 @@
-@import './assets/styles/custom';
+@import 'custom';
 
 html,
 body,
@@ -55,7 +55,7 @@ body {
         border: 1px solid $system-primary;
         transition: all 300ms;
         &:hover {
-            background-color: darken($white, 7%);
+            background-color: lighten($system-primary, 55%);
         }
 
     }

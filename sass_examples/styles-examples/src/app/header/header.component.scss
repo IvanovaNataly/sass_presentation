@@ -1,0 +1,37 @@
+@import '../../assets/styles/custom';
+
+$icon-width: 30px;
+
+.header {
+    display: flex;
+    font-size: $large-font-size;
+    color: $white;
+    height: $header-height;
+    line-height: $header-height;
+    padding: 0 $card-padding;
+    background-color: $system-primary;
+    justify-content: space-between;
+    align-items: center;
+    &-title {
+        @include resetH;
+        font-weight: 500;
+    }
+    &-title-link {
+        @include resetLink;
+    }
+    &-icons {
+        display: flex;
+        align-items: center;
+    }
+    &-user {
+        @include resetBtn;
+        width: $icon-width;
+        height: $icon-width;
+    }
+    &-settings {
+        @include resetBtn;
+        width: $icon-width;
+        height: $icon-width;
+        margin-left: 10px;
+    }
+}

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MainWrapperComponent } from './main-wrapper/main-wrapper.component';
 import { LoaderComponent } from "./loader/loader.component";
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainWrapperComponent,
     LoaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
