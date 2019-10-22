@@ -44,7 +44,9 @@
         &-input {
             @include resetInput;
             text-align: center;
+            color: $main-color-middle;
             width: 50px;
+            border: 1px solid $border-color;
         }
         &-error {
             text-align: right;

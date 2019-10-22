@@ -25,10 +25,10 @@
 @mixin resetInput {
     font-family: $font-family-main;
     font-size: $main-font-size;
-    color: $main-color-middle;
+    color: inherit;
     text-align: left;
     background: none;
-    border: 1px solid $border-color;
+    border: none;
     border-radius: 3px;
     padding: 5px 10px;
     margin: 0;
