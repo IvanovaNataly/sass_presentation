@@ -1,0 +1,72 @@
+@import '../../assets/styles/custom';
+
+$animation-delay: 100ms;
+$phone-duration: 1000ms;
+$typing-duration: 500ms;
+
+.main-wrapper-landscape {
+    display: none;
+    @include respond-to(landscape) {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.9);
+        align-items: center;
+        position: fixed;
+        z-index: 10000;
+        pointer-events: none;
+    }
+    &-image {
+        width: 40%;
+        height: 65%;
+        background-image: url('../../assets/images/phone.svg');
+        background-repeat: no-repeat;
+        animation-name: phoneAnimation;
+        animation-duration: $phone-duration;
+        animation-fill-mode: forwards;
+        animation-delay: $animation-delay;
+        position: absolute;
+        left: 30%;
+    }
+    &-text {
+        font-size: 2em;
+        letter-spacing: .1em;
+        color: rgba(255,255,255,0.9);
+        height: 34%;
+        line-height: 1.5;
+        margin: 0 auto;
+        position: absolute;
+        left: 17%;
+        ::ng-deep .ltr & {
+            width: 39%;
+        }
+    }
+    &-text-first {
+        display: block;
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: $typing-duration typing steps(40, end);
+        animation-delay: $animation-delay + $phone-duration;
+        animation-fill-mode: forwards;
+    }
+    &-text-second {
+        display: block;
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: $typing-duration typing steps(40, end);
+        animation-delay: $animation-delay + $phone-duration + $typing-duration;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes phoneAnimation {
+    0%   { transform: rotate(-90deg) translate(0%, 0); }
+    100% { transform: rotate(-0deg) translate(46%, 0);}
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
