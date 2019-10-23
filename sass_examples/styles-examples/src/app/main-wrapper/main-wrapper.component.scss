@@ -72,9 +72,6 @@
     height: $footer-height;
     padding: 0 $card-padding;
     background-color: $system-primary;
-    @include respond-to(phones) {
-        height: $footer-height-mobile;
-    }
     &-list {
         @include resetUl;
         display: flex;

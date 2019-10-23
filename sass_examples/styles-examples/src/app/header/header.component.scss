@@ -13,18 +13,11 @@ $icon-margin: 10px;
     background-color: $system-primary;
     justify-content: space-between;
     align-items: center;
-    @include respond-to(phones) {
-        padding: 0 ($card-padding + $card-padding + $icon-margin) 0 $card-padding;
-    }
     &-title {
         @include resetH;
         font-weight: 500;
         //max-width: 200px;
         //@include ellipsis;
-        @include respond-to(phones) {
-            max-width: 200px;
-            @include ellipsis;
-        }
     }
     &-title-link {
         @include resetLink;
