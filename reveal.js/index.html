@@ -36,30 +36,88 @@
                         <!--<li class="fragment fade-left">easy to step into the future</li>-->
                     <!--</ul>-->
                 <!--</section>-->
-				<section>
-					<h4>variables</h4>
-					<pre>
-						<code>.sidebar {
-	color: #aeaeae;
-	width: 220px;
-	height: 100%;
-	padding: 24px;
-	background-color: #272222;
-	flex: 0 0 220px;
+				<!--<section>-->
+					<!--<h4>variables</h4>-->
+					<!--<pre>-->
+						<!--<code>.sidebar {-->
+	<!--color: #aeaeae;-->
+	<!--width: 220px;-->
+	<!--height: 100%;-->
+	<!--padding: 24px;-->
+	<!--background-color: #272222;-->
+	<!--flex: 0 0 220px;-->
+<!--}</code>-->
+				  <!--</pre>-->
+					<!--<pre>-->
+						<!--<code>.sidebar {-->
+	<!--color: $side-nav-color;-->
+	<!--width: $side-nav-width;-->
+	<!--height: 100%;-->
+	<!--padding: $card-padding;-->
+	<!--background-color: $side-nav-background;-->
+	<!--flex: 0 0 $side-nav-width;-->
+<!--}</code>-->
+					<!--</pre>-->
+				<!--</section>-->
+
+                <!--<section>-->
+                    <!--<h4>@extend</h4>-->
+                    <!--<pre>-->
+						<!--<code>.tooltip {-->
+	<!--position: relative;-->
+    <!--&:after {-->
+        <!--content: attr(data-tooltip);-->
+        <!--font-family: $font-family-main;-->
+        <!--font-size: $small-font-size;-->
+        <!--[+ 20 lines of code]-->
+    <!--}-->
+<!--}</code>-->
+				  <!--</pre>-->
+                    <!--<pre><code>.popover {-->
+    <!--@extend .tooltip;-->
+<!--}</code>-->
+					<!--</pre>-->
+                <!--</section>-->
+
+                <!--<section>-->
+                    <!--<h4>%placeholder</h4>-->
+                    <!--<pre>-->
+						<!--<code>%tooltip {-->
+	<!--position: relative;-->
+    <!--&:after {-->
+        <!--content: attr(data-tooltip);-->
+        <!--font-family: $font-family-main;-->
+        <!--font-size: $small-font-size;-->
+        <!--[+ 20 lines of code]-->
+    <!--}-->
+<!--}</code>-->
+				  <!--</pre>-->
+                    <!--<pre><code>.tooltip {-->
+    <!--@extend %tooltip;-->
+<!--}</code>-->
+					<!--</pre>-->
+                    <!--<pre><code>.popover {-->
+    <!--@extend %tooltip;-->
+<!--}</code>-->
+					<!--</pre>-->
+                <!--</section>-->
+
+                <section>
+                    <h4>@mixin</h4>
+                    <pre>
+						<code>@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }</code>
 				  </pre>
-					<pre>
-						<code>.sidebar {
-	color: $side-nav-color;
-	width: $side-nav-width;
-	height: 100%;
-	padding: $card-padding;
-	background-color: $side-nav-background;
-	flex: 0 0 $side-nav-width;
+                    <pre><code>.popover {
+    @extend .tooltip;
 }</code>
 					</pre>
-				</section>
-			</div>
+                </section>
+
+            </div>
 		</div>
 
 		<script src="js/reveal.js"></script>

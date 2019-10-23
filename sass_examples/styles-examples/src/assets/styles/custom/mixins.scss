@@ -8,10 +8,10 @@
     @if $media == tiny {
         @media screen and (max-width: 374px) { @content; }
     }
-    @if $media == handhelds {
+    @else if $media == handhelds {
         @media screen and (max-width: 540px) { @content; }
     }
-    @if $media == phones {
+    @else if $media == phones {
         @media screen and (max-width: 667px) { @content; }
     }
     @else if $media == small-screens {

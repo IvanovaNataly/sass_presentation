@@ -1,0 +1,72 @@
+@import "custom";
+
+.tooltip {
+    position: relative;
+    &:after {
+        content: attr(data-tooltip);
+        font-family: $font-family-main;
+        font-size: $small-font-size;
+        font-weight: 400;
+        color: $white;
+        width: max-content;
+        max-width: 405px;
+        line-height: normal;
+        padding: 6px 8px;
+        background-color: $side-nav-background;
+        border: none;
+        box-shadow: none;
+        border-radius: 3px;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        right: -70%;
+        bottom: -100%;
+        z-index: 100;
+        white-space: normal;
+        word-break: break-word;
+        pointer-events: none;
+        -webkit-transition: visibility 0s 1s linear, opacity 0.3s ease;
+        transition: visibility 0s 1s linear, opacity 0.3s ease;
+    }
+    &:hover:after {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: opacity 0.3s 0.6s ease-in;
+        transition: opacity 0.3s 0.6s ease-in;
+    }
+}
+
+.popover {
+    @extend .tooltip;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//@mixin tooltipPlace ($left: -100%, $bottom: -100%) {
+//    @extend .tooltip;
+//    &:after {
+//        left: $left;
+//        bottom: $bottom;
+//    }
+//}
+//
+//.header-user {
+//    @include tooltipPlace;
+//}
+//
+//.header-settings {
+//    @include tooltipPlace(-85px, -30px);
+//}
+//
+//.sidebar-item {
+//    @include tooltipPlace(100%);
+//}
