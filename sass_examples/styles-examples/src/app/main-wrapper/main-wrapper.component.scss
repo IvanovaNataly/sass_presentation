@@ -72,6 +72,9 @@
     height: $footer-height;
     padding: 0 $card-padding;
     background-color: $system-primary;
+    @include respond-to(phones) {
+        height: $footer-height-mobile;
+    }
     &-list {
         @include resetUl;
         display: flex;
@@ -89,3 +92,40 @@
         list-style: none;
     }
 }
+
+.toggle-sidebar {
+    &-input {
+        display: none;
+        & ~ app-sidebar {
+            @include respond-to(phones) {
+                ::ng-deep .sidebar {
+                    width: 100vw;
+                    transition: left 500ms ease-in-out;
+                    z-index: 1;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+        &:checked ~ app-sidebar {
+            @include respond-to(phones) {
+                ::ng-deep .sidebar {
+                    left: -100vw;
+                }
+            }
+        }
+    }
+    &-label {
+        display: none;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 30px;
+        right: $card-padding;
+        z-index: 2;
+        @include respond-to(phones) {
+            display: block;
+        }
+    }
+}
+

@@ -7,6 +7,10 @@
     padding: $card-padding;
     background-color: $side-nav-background;
     flex: 0 0 $side-nav-width;
+    //@include respond-to(phones) {
+    //    width: 100%;
+    //}
+
     &-label {
         font-size: 0;
     }
