@@ -16,8 +16,6 @@ $icon-margin: 10px;
     &-title {
         @include resetH;
         font-weight: 500;
-        //max-width: 200px;
-        //@include ellipsis;
     }
     &-title-link {
         @include resetLink;
