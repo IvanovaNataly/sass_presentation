@@ -102,18 +102,59 @@
 					<!--</pre>-->
                 <!--</section>-->
 
+                <!--<section>-->
+                    <!--<h4>@mixin</h4>-->
+                    <!--<pre>-->
+						<!--<code>@mixin ellipsis {-->
+    <!--white-space: nowrap;-->
+    <!--overflow: hidden;-->
+    <!--text-overflow: ellipsis;-->
+<!--}</code>-->
+				  <!--</pre>-->
+                    <!--<pre><code>.sidebar-item-text {-->
+    <!--display: block;-->
+    <!--@include ellipsis;-->
+<!--}</code>-->
+					<!--</pre>-->
+                    <!--<pre><code>.header-title {-->
+    <!--@include ellipsis;-->
+<!--}</code>-->
+					<!--</pre>-->
+                <!--</section>-->
+
+                <!--<section>-->
+                    <!--<h4>@mixins</h4>-->
+                    <!--<ul>-->
+                        <!--<li class="fragment fade-left">multiple usage of the same set of properties</li>-->
+                        <!--<li class="fragment fade-left">parameters</li>-->
+                        <!--<li class="fragment fade-left">reset</li>-->
+                        <!--<li class="fragment fade-left">respond-to</li>-->
+                        <!--<li class="fragment fade-left">naughty cases (IE, landscape)</li>-->
+                    <!--</ul>-->
+                <!--</section>-->
+
                 <section>
-                    <h4>@mixin</h4>
+                    <h4>@if</h4>
                     <pre>
-						<code>@mixin ellipsis {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+						<code>@mixin customButton($border-color, $icon) {
+    @include resetBtn;
+    text-transform: uppercase;
+    padding: 5px 20px;
+
+    @if $border {
+        border: 1px solid $border-color;
+    } @else {
+        border: none;
+    }
+
+    @if $icon == user {
+        padding-left: 15px;
+        background-image: url("user-image.gif");
+    }
 }</code>
 				  </pre>
-                    <pre><code>.sidebar-item-text {
-    display: block;
-    @include ellipsis;
+                    <pre><code>.btn-primary {
+    @include customButton(#ddd, user);
 }</code>
 					</pre>
                     <pre><code>.header-title {
@@ -121,18 +162,6 @@
 }</code>
 					</pre>
                 </section>
-
-                <section>
-                    <h4>@mixins</h4>
-                    <ul>
-                        <li class="fragment fade-left">multiple usage of the same set of properties</li>
-                        <li class="fragment fade-left">parameters</li>
-                        <li class="fragment fade-left">reset</li>
-                        <li class="fragment fade-left">respond-to</li>
-                        <li class="fragment fade-left">naughty cases (IE, landscape)</li>
-                    </ul>
-                </section>
-
             </div>
 		</div>
 
