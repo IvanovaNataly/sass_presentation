@@ -36,6 +36,222 @@
                         <!--<li class="fragment fade-left">easy to step into the future</li>-->
                     <!--</ul>-->
                 <!--</section>-->
+
+                <!--<section>-->
+                    <!--<h4>&</h4>-->
+                    <!--<div class="flex-container">-->
+                        <!--<div class="flex-50">-->
+                            <!--<pre>-->
+						<!--<code>.some-class {-->
+    <!--background-color: red;-->
+
+    <!--&:hover {-->
+        <!--background-color: blue;-->
+    <!--}-->
+<!--}</code>-->
+				  <!--</pre>-->
+                            <!--<pre><code>.some-class {-->
+    <!--background-color: red;-->
+<!--}-->
+
+<!--.some-class:hover {-->
+    <!--background-color: blue;-->
+<!--}</code>-->
+					<!--</pre>-->
+                        <!--</div>-->
+                        <!--<ul class="flex-50">-->
+                            <!--<li class="fragment fade-left small-font margin-bottom">&:hover, &:active, &:focus, &:checked</li>-->
+                            <!--<li class="fragment fade-left small-font margin-bottom">&:before, &:after</li>-->
+                            <!--<li class="fragment fade-left small-font margin-bottom">&:first-child, &:last-child, &:nth-child</li>-->
+                            <!--<li class="fragment fade-left small-font margin-bottom">&:not(.another-class)</li>-->
+                            <!--<li class="fragment fade-left small-font margin-bottom">&::placeholder</li>-->
+                            <!--<li class="fragment fade-left small-font margin-bottom">&[target="_blank"]</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</section>-->
+
+                <!--<section>-->
+                    <!--<h4>&</h4>-->
+                    <!--<div class="flex-container">-->
+                        <!--<pre>-->
+						<!--<code>.btn-awesome {-->
+    <!--background-color: red;-->
+
+    <!--.ltr & {-->
+        <!--margin-right: 10px;-->
+    <!--}-->
+
+    <!--.rtl & {-->
+        <!--margin-left: 10px;-->
+    <!--}-->
+<!--}</code>-->
+				  <!--</pre>-->
+                            <!--<pre><code>.btn-awesome {-->
+    <!--background-color: red;-->
+<!--}-->
+
+<!--.ltr .btn-awesome {-->
+    <!--margin-right: 10px;-->
+<!--}-->
+
+<!--.rtl .btn-awesome {-->
+    <!--margin-left: 10px;-->
+<!--}</code>-->
+                        <!--</pre>-->
+                    <!--</div>-->
+                <!--</section>-->
+
+                <!--<section>-->
+                    <!--<section>-->
+                        <!--<h4>nesting</h4>-->
+                        <!--<div class="flex-container">-->
+                            <!--<div class="flex-50">-->
+                                <!--<pre><code>.pacific-ocean {-->
+    <!--background-color: blue;-->
+
+    <!--& .whale {-->
+        <!--max-width: unset;-->
+    <!--}-->
+
+    <!--& .octopus {-->
+        <!--display: flex;-->
+    <!--}-->
+<!--}</code>-->
+				                <!--</pre>-->
+                            <!--</div>-->
+
+                            <!--<div class="flex-50">-->
+                                <!--<pre><code>.pacific-ocean {-->
+    <!--background-color: blue;-->
+
+    <!--.whale {-->
+        <!--max-width: unset;-->
+    <!--}-->
+
+    <!--.octopus {-->
+        <!--display: flex;-->
+    <!--}-->
+<!--}</code>-->
+				                <!--</pre>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</section>-->
+                    <!--<section>-->
+                        <!--<pre><code>.pacific-ocean {-->
+    <!--background-color: blue;-->
+<!--}-->
+
+    <!--.pacific-ocean .whale {-->
+        <!--max-width: unset;-->
+    <!--}-->
+
+    <!--.pacific-ocean .octopus {-->
+        <!--display: flex;-->
+    <!--}-->
+<!--}</code>-->
+					    <!--</pre>-->
+                    <!--</section>-->
+                <!--</section>-->
+
+                <!--<section>-->
+                    <!--<h4>nesting</h4>-->
+                    <!--<div class="flex-container small-font">-->
+                        <!--<div class="flex-50">-->
+                            <!--<pre><code>.pacific-ocean {-->
+
+    <!--.whale {-->
+        <!--max-width: unset;-->
+
+        <!--.octopus {-->
+            <!--display: flex;-->
+
+            <!--.fish {-->
+                <!--width: 30px;-->
+                <!--height: 30px;-->
+
+                 <!--.sea-horse {-->
+                    <!--width: 5px;-->
+                    <!--height: 5px;-->
+                <!--}-->
+            <!--}-->
+        <!--}-->
+    <!--}</code>-->
+                                <!--</pre>-->
+                        <!--</div>-->
+
+                        <!--<div class="flex-50 fragment fade-left">-->
+                            <!--<pre><code>.pacific-ocean .whale {-->
+        <!--max-width: unset;-->
+    <!--}-->
+
+<!--.pacific-ocean .whale .octopus {-->
+    <!--display: flex;-->
+<!--}-->
+
+<!--.pacific-ocean .whale .octopus .fish {-->
+    <!--width: 30px;-->
+    <!--height: 30px;-->
+<!--}-->
+
+<!--.pacific-ocean .whale .octopus .fish .sea-horse {-->
+    <!--width: 5px;-->
+    <!--height: 5px;-->
+<!--}</code>-->
+                            <!--</pre>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</section>-->
+
+                <!--<section>-->
+                    <!--<h4>nesting</h4>-->
+                    <!--<div class="flex-container">-->
+                        <!--<div class="flex-50">-->
+                            <!--<pre><code>.ocean-pacific {-->
+
+    <!--&-whale {-->
+        <!--max-width: unset;-->
+    <!--}-->
+
+    <!--&-octopus {-->
+        <!--display: flex;-->
+    <!--}-->
+
+    <!--&-fish {-->
+        <!--width: 30px;-->
+        <!--height: 30px;-->
+    <!--}-->
+
+    <!--&-sea-horse {-->
+        <!--width: 5px;-->
+        <!--height: 5px;-->
+    <!--}-->
+<!--}</code>-->
+                            <!--</pre>-->
+                        <!--</div>-->
+
+                        <!--<div class="flex-50 fragment fade-left">-->
+                            <!--<pre><code>.ocean-pacific-whale {-->
+    <!--max-width: unset;-->
+<!--}-->
+
+<!--.ocean-pacific-octopus {-->
+    <!--display: flex;-->
+<!--}-->
+
+<!--.ocean-pacific-fish {-->
+    <!--width: 30px;-->
+    <!--height: 30px;-->
+<!--}-->
+
+<!--.ocean-pacific-sea-horse {-->
+    <!--width: 5px;-->
+    <!--height: 5px;-->
+<!--}</code>-->
+                            <!--</pre>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</section>-->
+
 				<!--<section>-->
 					<!--<h4>variables</h4>-->
 					<!--<pre>-->
@@ -59,6 +275,42 @@
 <!--}</code>-->
 					<!--</pre>-->
 				<!--</section>-->
+
+                <section>
+                    <h4>variables</h4>
+                    <pre>
+						<code>$alertClass: "error";
+
+.message-#{$alertClass} {
+    color: red;
+}</code>
+				  </pre>
+                    <pre>
+						<code>.message-error {
+    color: red;
+}</code>
+					</pre>
+                </section>
+
+                <section>
+                    <h4>variables</h4>
+                    <pre>
+						<code>$breakpoint: 768px;
+
+@media (max-width: #{$breakpoint}) {
+    .some-class {
+        width: auto;
+    )
+}</code>
+				  </pre>
+                    <pre>
+						<code>@media (max-width: 768px) {
+    .some-class {
+        width: auto;
+    )
+}</code>
+					</pre>
+                </section>
 
                 <!--<section>-->
                     <!--<h4>@extend</h4>-->
@@ -162,6 +414,18 @@
 }</code>
 					</pre>
                 </section>
+
+                <section>
+                    <h4>@mixins</h4>
+                    <ul>
+                        <li class="fragment fade-left">multiple usage of the same set of properties</li>
+                        <li class="fragment fade-left">parameters</li>
+                        <li class="fragment fade-left">reset</li>
+                        <li class="fragment fade-left">respond-to</li>
+                        <li class="fragment fade-left">naughty cases (IE, landscape)</li>
+                    </ul>
+                </section>
+
             </div>
 		</div>
 

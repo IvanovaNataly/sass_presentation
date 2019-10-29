@@ -2,3 +2,19 @@
     display: flex;
     justify-content: space-around;
 }
+
+.flex-50 {
+    flex: 0 0 50%;
+}
+
+.small-font {
+    font-size: 38px;
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+}
+
+.reveal pre code {
+    max-height: unset !important;
+}
