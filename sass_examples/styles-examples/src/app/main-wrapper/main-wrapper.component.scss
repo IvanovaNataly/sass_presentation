@@ -126,3 +126,46 @@
     }
 }
 
+//
+//@mixin customButton($icon, $last-in-row: false, $resolution: desktop) {
+//    text-transform: uppercase;
+//    padding: 5px 20px;
+//
+//    @if $icon {
+//        padding-left: 50px;
+//        background-image: url("../../assets/images/user.svg");
+//        background-repeat: no-repeat;
+//        background-size: 30px;
+//        background-position: 10px center;
+//    }
+//
+//    @if $last-in-row {
+//        margin-left: 0;
+//    } @else {
+//        margin-left: 10px;
+//    }
+//
+//    @if $resolution == phones {
+//        width: 100%;
+//    }
+//}
+//
+//.btn-primary {
+//    @include customButton(true);
+//}
+//
+//.btn-secondary {
+//    @include customButton(false);
+//}
+//
+//.btn-secondary:last-child {
+//    @include customButton(false, true);
+//}
+//
+//@function make-greener($value) {
+//    @return $value + rgb(0,50,0);
+//}
+//
+//.btn-primary {
+//    background-color: make-greener($system-primary);
+//}
