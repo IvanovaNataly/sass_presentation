@@ -27,6 +27,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<!--<section><h3>SASS</h3></section>-->
+                <!---->
 				<!--<section>-->
 					<!--<h4>Why?</h4>-->
                     <!--<ul>-->
@@ -50,7 +51,8 @@
     <!--}-->
 <!--}</code>-->
 				  <!--</pre>-->
-                            <!--<pre><code>.some-class {-->
+                            <!--<pre><code>/* compiled CSS */-->
+<!--.some-class {-->
     <!--background-color: red;-->
 <!--}-->
 
@@ -72,21 +74,24 @@
 
                 <!--<section>-->
                     <!--<h4>&</h4>-->
-                    <!--<div class="flex-container">-->
-                        <!--<pre>-->
-						<!--<code>.btn-awesome {-->
-    <!--background-color: red;-->
+                    <!--<div class="flex-container" style="align-items: center;">-->
+                        <!--<div class="flex-50">-->
+                            <!--<pre style="width: 95%;"><code>.btn-awesome {-->
+        <!--background-color: red;-->
 
-    <!--.ltr & {-->
-        <!--margin-right: 10px;-->
-    <!--}-->
+        <!--.ltr & {-->
+            <!--margin-right: 10px;-->
+        <!--}-->
 
-    <!--.rtl & {-->
-        <!--margin-left: 10px;-->
-    <!--}-->
-<!--}</code>-->
-				  <!--</pre>-->
-                            <!--<pre><code>.btn-awesome {-->
+        <!--.rtl & {-->
+            <!--margin-left: 10px;-->
+        <!--}-->
+    <!--}</code>-->
+                            <!--</pre>-->
+                        <!--</div>-->
+                        <!--<div class="flex-50">-->
+                            <!--<pre><code>/* compiled CSS */-->
+<!--.btn-awesome {-->
     <!--background-color: red;-->
 <!--}-->
 
@@ -97,7 +102,8 @@
 <!--.rtl .btn-awesome {-->
     <!--margin-left: 10px;-->
 <!--}</code>-->
-                        <!--</pre>-->
+                            <!--</pre>-->
+                        <!--</div>-->
                     <!--</div>-->
                 <!--</section>-->
 
@@ -137,17 +143,17 @@
                         <!--</div>-->
                     <!--</section>-->
                     <!--<section>-->
-                        <!--<pre><code>.pacific-ocean {-->
+                        <!--<pre><code>/* compiled CSS */-->
+<!--.pacific-ocean {-->
     <!--background-color: blue;-->
 <!--}-->
 
-    <!--.pacific-ocean .whale {-->
-        <!--max-width: unset;-->
-    <!--}-->
+<!--.pacific-ocean .whale {-->
+    <!--max-width: unset;-->
+<!--}-->
 
-    <!--.pacific-ocean .octopus {-->
-        <!--display: flex;-->
-    <!--}-->
+<!--.pacific-ocean .octopus {-->
+    <!--display: flex;-->
 <!--}</code>-->
 					    <!--</pre>-->
                     <!--</section>-->
@@ -374,250 +380,250 @@
 					<!--</pre>-->
                 <!--</section>-->
 
-                <!--<section>-->
-                    <!--<h4>@mixin parameters</h4>-->
-                    <!--<div class="flex-container">-->
-                        <!--<div class="flex-50">-->
-                            <!--<pre>-->
-						        <!--<code>@mixin customButton($border-color) {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: 1px solid $border-color;-->
-<!--}</code>-->
-				            <!--</pre>-->
-                        <!--</div>-->
-                        <!--<div class="flex-50">-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>.btn-primary {-->
-    <!--@include customButton(#ddd);-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>.btn-primary {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: 1px solid #ddd;-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</section>-->
+                <section>
+                    <h4>@mixin parameters</h4>
+                    <div class="flex-container">
+                        <div class="flex-50">
+                            <pre>
+						        <code>@mixin customButton($border-color) {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: 1px solid $border-color;
+}</code>
+				            </pre>
+                        </div>
+                        <div class="flex-50">
+                            <div class="fragment fade-left">
+                                <pre><code>.btn-primary {
+    @include customButton(#ddd);
+}</code>
+					            </pre>
+                            </div>
+                            <div class="fragment fade-left">
+                                <pre><code>.btn-primary {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: 1px solid #ddd;
+}</code>
+					            </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                <!--<section>-->
-                    <!--<h4>@mixin parameters</h4>-->
-                    <!--<div class="flex-container">-->
-                        <!--<div class="flex-50">-->
-                            <!--<pre>-->
-						        <!--<code>@mixin customButton($border-width, $border-color) {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: $border-width solid $border-color;-->
-<!--}</code>-->
-				            <!--</pre>-->
-                        <!--</div>-->
-                        <!--<div class="flex-50">-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>.btn-primary {-->
-    <!--@include customButton(3px, #ddd);-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>.btn-primary {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: 3px solid #ddd;-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</section>-->
+                <section>
+                    <h4>@mixin parameters</h4>
+                    <div class="flex-container">
+                        <div class="flex-50">
+                            <pre>
+						        <code>@mixin customButton($border-width, $border-color) {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: $border-width solid $border-color;
+}</code>
+				            </pre>
+                        </div>
+                        <div class="flex-50">
+                            <div class="fragment fade-left">
+                                <pre><code>.btn-primary {
+    @include customButton(3px, #ddd);
+}</code>
+					            </pre>
+                            </div>
+                            <div class="fragment fade-left">
+                                <pre><code>.btn-primary {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: 3px solid #ddd;
+}</code>
+					            </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                <!--<section>-->
-                    <!--<h4>@mixin parameters</h4>-->
-                    <!--<div class="flex-container">-->
-                        <!--<div class="flex-50">-->
-                            <!--<pre>-->
-						        <!--<code>@mixin customButton($border-width, $border-color) {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: $border-width solid $border-color;-->
-<!--}</code>-->
-				            <!--</pre>-->
-                        <!--</div>-->
-                        <!--<div class="flex-50">-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>.btn-primary {-->
-    <!--@include customButton($border-width: 3px, $border-color: #ddd);-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>.btn-primary {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: 3px solid #ddd;-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</section>-->
+                <section>
+                    <h4>@mixin parameters</h4>
+                    <div class="flex-container">
+                        <div class="flex-50">
+                            <pre>
+						        <code>@mixin customButton($border-width, $border-color) {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: $border-width solid $border-color;
+}</code>
+				            </pre>
+                        </div>
+                        <div class="flex-50">
+                            <div class="fragment fade-left">
+                                <pre><code>.btn-primary {
+    @include customButton($border-width: 3px, $border-color: #ddd);
+}</code>
+					            </pre>
+                            </div>
+                            <div class="fragment fade-left">
+                                <pre><code>.btn-primary {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: 3px solid #ddd;
+}</code>
+					            </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                <!--<section>-->
-                    <!--<h4>@mixin parameters</h4>-->
-                    <!--<div class="flex-container">-->
-                        <!--<div class="flex-50">-->
-                            <!--<pre>-->
-						        <!--<code>@mixin customButton($border-width, $border-color) {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: $border-width solid $border-color;-->
-<!--}</code>-->
-				            <!--</pre>-->
-                        <!--</div>-->
-                        <!--<div class="flex-50">-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>.btn-primary {-->
-    <!--@include customButton($border-color: #ddd, $border-width: 3px);-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>.btn-primary {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: 3px solid #ddd;-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</section>-->
+                <section>
+                    <h4>@mixin parameters</h4>
+                    <div class="flex-container">
+                        <div class="flex-50">
+                            <pre>
+						        <code>@mixin customButton($border-width, $border-color) {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: $border-width solid $border-color;
+}</code>
+				            </pre>
+                        </div>
+                        <div class="flex-50">
+                            <div class="fragment fade-left">
+                                <pre><code>.btn-primary {
+    @include customButton($border-color: #ddd, $border-width: 3px);
+}</code>
+					            </pre>
+                            </div>
+                            <div class="fragment fade-left">
+                                <pre><code>.btn-primary {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: 3px solid #ddd;
+}</code>
+					            </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                <!--<section>-->
-                    <!--<h4>@mixin parameters</h4>-->
-                    <!--<div class="flex-container">-->
-                        <!--<div class="flex-50">-->
-                            <!--<pre>-->
-						        <!--<code>@mixin customButton($border-color: red) {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: 1px solid $border-color;-->
-<!--}</code>-->
-				            <!--</pre>-->
-                        <!--</div>-->
-                        <!--<div class="flex-50">-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>.btn-primary {-->
-    <!--@include customButton();-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>.btn-primary {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: 3px solid red;-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</section>-->
+                <section>
+                    <h4>@mixin parameters</h4>
+                    <div class="flex-container">
+                        <div class="flex-50">
+                            <pre>
+						        <code>@mixin customButton($border-color: red) {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: 1px solid $border-color;
+}</code>
+				            </pre>
+                        </div>
+                        <div class="flex-50">
+                            <div class="fragment fade-left">
+                                <pre><code>.btn-primary {
+    @include customButton();
+}</code>
+					            </pre>
+                            </div>
+                            <div class="fragment fade-left">
+                                <pre><code>.btn-primary {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: 3px solid red;
+}</code>
+					            </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                <!--<section>-->
-                    <!--<h4>@mixin parameters</h4>-->
-                    <!--<div class="flex-container">-->
-                        <!--<div class="flex-50">-->
-                            <!--<pre>-->
-						        <!--<code>@mixin customButton($border-color) {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: 1px solid $border-color;-->
-<!--}</code>-->
-				            <!--</pre>-->
-                        <!--</div>-->
-                        <!--<div class="flex-50">-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>$border-color: blue;-->
+                <section>
+                    <h4>@mixin parameters</h4>
+                    <div class="flex-container">
+                        <div class="flex-50">
+                            <pre>
+						        <code>@mixin customButton($border-color) {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: 1px solid $border-color;
+}</code>
+				            </pre>
+                        </div>
+                        <div class="flex-50">
+                            <div class="fragment fade-left">
+                                <pre><code>$border-color: blue;
 
-<!--.btn-primary {-->
-    <!--@include customButton(#ddd);-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                            <!--<div class="fragment fade-left">-->
-                                <!--<pre><code>.btn-primary {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
-    <!--border: 1px solid #ddd;-->
-<!--}</code>-->
-					            <!--</pre>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</section>-->
+.btn-primary {
+    @include customButton(#ddd);
+}</code>
+					            </pre>
+                            </div>
+                            <div class="fragment fade-left">
+                                <pre><code>.btn-primary {
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: 1px solid #ddd;
+}</code>
+					            </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                <!--<section>-->
-                    <!--<h4>@if</h4>-->
-                    <!--<div class="flex-container">-->
-                        <!--<div class="flex-50">-->
-                            <!--<pre>-->
-                                <!--<code>@mixin customButton($icon, $last-in-row: false, $resolution: desktop) {-->
-    <!--text-transform: uppercase;-->
-    <!--padding: 5px 20px;-->
+                <section>
+                    <h4>@if</h4>
+                    <div class="flex-container">
+                        <div class="flex-50">
+                            <pre>
+                                <code>@mixin customButton($icon, $last-in-row: false, $resolution: desktop) {
+    text-transform: uppercase;
+    padding: 5px 20px;
 
-    <!--@if $icon {-->
-        <!--padding-left: 50px;-->
-        <!--background-image: url("../../assets/images/user.svg");-->
-        <!--background-repeat: no-repeat;-->
-        <!--background-size: 30px;-->
-        <!--background-position: 10px center;-->
-    <!--}-->
+    @if $icon {
+        padding-left: 50px;
+        background-image: url("../../assets/images/user.svg");
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: 10px center;
+    }
 
-    <!--@if $last-in-row {-->
-        <!--margin-left: 0;-->
-    <!--} @else {-->
-        <!--margin-left: 10px;-->
-    <!--}-->
+    @if $last-in-row {
+        margin-left: 0;
+    } @else {
+        margin-left: 10px;
+    }
 
-    <!--@if $resolution == phones {-->
-        <!--width: 100%;-->
-    <!--}-->
-<!--}</code>-->
-				            <!--</pre>-->
-                        <!--</div>-->
-                        <!--<div class="flex-50">-->
-                            <!--<pre><code>.btn-primary {-->
-    <!--@include customButton(true);-->
-<!--}-->
+    @if $resolution == phones {
+        width: 100%;
+    }
+}</code>
+				            </pre>
+                        </div>
+                        <div class="flex-50">
+                            <pre><code>.btn-primary {
+    @include customButton(true);
+}
 
-<!--.btn-secondary {-->
-    <!--@include customButton(false);-->
-<!--}-->
+.btn-secondary {
+    @include customButton(false);
+}
 
-<!--.btn-secondary:last-child {-->
-    <!--@include customButton(false, true);-->
-<!--}</code>-->
-					        <!--</pre>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</section>-->
+.btn-secondary:last-child {
+    @include customButton(false, true);
+}</code>
+					        </pre>
+                        </div>
+                    </div>
+                </section>
 
-                <!--<section>-->
-                    <!--<h4>@mixins</h4>-->
-                    <!--<ul>-->
-                        <!--<li class="fragment fade-left">multiple usage of the same set of properties</li>-->
-                        <!--<li class="fragment fade-left">parameters</li>-->
-                        <!--<li class="fragment fade-left">reset</li>-->
-                        <!--<li class="fragment fade-left">respond-to</li>-->
-                        <!--<li class="fragment fade-left">naughty cases (IE, landscape)</li>-->
-                    <!--</ul>-->
-                <!--</section>-->
+                <section>
+                    <h4>@mixins</h4>
+                    <ul>
+                        <li class="fragment fade-left">multiple usage of the same set of properties</li>
+                        <li class="fragment fade-left">parameters</li>
+                        <li class="fragment fade-left">reset</li>
+                        <li class="fragment fade-left">respond-to</li>
+                        <li class="fragment fade-left">naughty cases (IE, landscape)</li>
+                    </ul>
+                </section>
 
                 <section>
                     <h4>@function</h4>
@@ -636,6 +642,42 @@
 					        </pre>
                         </div>
                     </div>
+                </section>
+
+                <section>
+                    <h4>@each</h4>
+                    <div class="flex-container">
+                        <div class="flex-50">
+                            <pre>
+                                <code>@each $name in 'save' 'cancel' 'help' {
+    .icon-#{$name} {
+        background-image: url('/images/#{$name}.png');
+    }
+}</code>
+				            </pre>
+                        </div>
+                        <div class="flex-50">
+                            <pre><code>/* compiled CSS */
+.icon-save {
+  background-image: url("/images/save.png");
+}
+.icon-cancel {
+  background-image: url("/images/cancel.png");
+}
+.icon-help {
+  background-image: url("/images/help.png");
+}</code>
+					        </pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <ul>
+                        <li class="fragment fade-left">Have LESS code</li>
+                        <li class="fragment fade-left">and</li>
+                        <li class="fragment fade-left">much more SASS fun!</li>
+                    </ul>
                 </section>
 
             </div>
