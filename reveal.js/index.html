@@ -384,34 +384,23 @@
 
                 <section>
                     <h4>@mixin parameters</h4>
-                    <div class="flex-container">
-                        <div class="flex-50">
-                            <pre>
-						        <code>@mixin customButton($border-color) {
+                    <pre><code>@mixin customButton($border-color) {
     text-transform: uppercase;
     padding: 5px 20px;
     border: 1px solid $border-color;
 }</code>
-				            </pre>
-                        </div>
-                        <div class="flex-50">
-                            <div class="fragment fade-left">
-                                <pre><code>.btn-primary {
+                    </pre>
+                    <pre><code>.btn-primary {
     @include customButton(#ddd);
 }</code>
-					            </pre>
-                            </div>
-                            <div class="fragment fade-left">
-                                <pre><code>/* compiled CSS */
+                    </pre>
+                    <pre><code>/* compiled CSS */
 .btn-primary {
     text-transform: uppercase;
     padding: 5px 20px;
     border: 1px solid #ddd;
 }</code>
-					            </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </pre>
                 </section>
 
                 <section>
